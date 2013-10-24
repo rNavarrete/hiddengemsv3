@@ -10,5 +10,21 @@ module ApplicationHelper
 	%Q{<iframe id="ytplayer" type="text/html" width="259" height="208"
 	src="https://www.youtube.com/embed/#{youtube_id}?controls=1&showinfo=0&autohide=1&color=white&theme=light"
 	frameborder="0" allowfullscreen></iframe>}
-	end                         
+	end
+	
+	def resource_class 
+		User 
+	end
+	
+	def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
 end

@@ -3,7 +3,7 @@
   <div class="content">  
     <div class="row 2nd-row">  
       <div class="span12">
-      <ul class="thumbnails list-unstyled">
+        <ul class="thumbnails list-unstyled">
           <% @videos.each do |video| %>
             <li class="col-md-3">
               <div class="thumbnail img-polaroid"> 
@@ -12,8 +12,6 @@
                   <span><%= "Artist: #{video.artist}" %></span><br>
                   <%= "Song: #{video.song}"%><br>
                   <%= "Found by: #{video.submitted_by}"%><br></span>
-                  <% @video = video.id%>
-                   <%= "hello: candy cane" %>
                    <%= button_to "Gem!", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
                   <div class="modal-footer" style="text-align: left; border-style:outset;">
                     <div class="progress progress-striped active" style="background: #ddd; border-style:outset;">
@@ -27,5 +25,6 @@
         </div>   
       </ul>
     </div>
-  </div>  
+  </div> 
+</div>   
 
