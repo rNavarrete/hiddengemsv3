@@ -1,0 +1,16 @@
+<div class="row">
+    <em><h2 class="lead"><legend>Share a hidden gem.</legend></h2></em>
+    <%= simple_form_for(@video, html: {class: 'form-horizontal' }) do |f| %>
+    <%= f.input  :video_link, placeholder: 'Paste a youtube video link here.'%>
+    <%= f.input  :artist %>
+    <%= f.input  :song %>
+    <%= f.input  :description, as: :text, input_html: { maxlength: 20 } %>
+    <%= f.input :submitter_id, :as => :hidden, :input_html =>{ :value => current_user.id} %>
+    <%= f.input :submitted_by, :as => :hidden, :input_html =>{ :value => current_user.username} %>
+
+   <div class="offset2">
+     <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+    </div>  
+  </div>          
+</div>

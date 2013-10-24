@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HiddenGems3</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+
+
+
+		<div class="jumbotron">
+
+		  <div class="row">
+
+		    <div class="navbar navbar-default navbar-fixed-top" >
+
+				  
+				  <div class="navbar-header">
+		          <a href="/"><%= image_tag("finallogo3.png")%></a>
+		                    <%= render 'devise/menu/registration_items' %>
+                        <%= render 'devise/menu/login_items' %>
+		          		      <%= render 'layouts/messages' %>
+
+		        </div>   
+      
+          <ul class="nav navbar-nav">
+  	        <li class="text-center"><%= button_to "Sign up", new_user_registration_path, method: "get", class: "btn navbar-btn btn-primary" %></li>
+  	      </ul>      	
+
+
+	        <form class="navbar-form navbar-right" role="signin">
+	        	<%= link_to "Forgot your password?", new_password_path('user')%>
+	          <div class="form-group">
+	            <%= form_for("user", :url => user_session_path) do |f| %>
+	  						<%= f.text_field :email, placeholder: "Email" %>
+	  						<%= f.password_field :password, placeholder: "Password" %>
+	  						<%= f.submit 'Sign in', class: "btn btn-default btn-sm" %>
+						  <% end %>
+						</div>  
+					</form>
+				</div>
+			</div>	
+			<div class="textinjumbo">	
+			  <h1>Discover musical gems. Contribute and vote for overlooked music.</h1>
+			</div>  
+		</div>  
+
+	  <%= yield %>
+  
+  </body>
+</html>
