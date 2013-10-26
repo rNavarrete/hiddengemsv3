@@ -1,8 +1,9 @@
 <div class= "container">
-	<div class="row">
+	<div class="navbar navbar-default navbar-fixed-top" >
+		<%= render 'layouts/messages' %>
 
-		<div class="navbar navbar-default navbar-fixed-top" >
-		  <%= render 'layouts/messages' %>
+
+    <div class="navbar-collapse collapse">
 
 
 		  <div class="navbar-header">
@@ -14,17 +15,15 @@
 
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-primary", :style => 'margin: 7px;' %></li>
-          <li><h5 class="navbar-text"><%= link_to "Signout", destroy_user_session_path, :method => "delete", :style => "padding-left: 0px;"%></h5></li>          
-          <li><h5 class="navbar-text"><%= "@#{current_user.username}" %></h5></li>
-
+          <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-primary" %></h5></li> 
+          <li><h5><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: gray;"%></h5></li>    
         </ul>
       <% else %>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= button_to "Create Account", new_user_registration_path, method: "get", class: "btn navbar-btn btn-primary", :style => 'margin: 8px;' %></li>
-          <li><%= button_to "Sign in", user_session_path,class: "btn btn-default btn-sm", :style => "margin-bottom: 1px; margin: 8px;", method: "get" %></li>
+          <li><h5 class="navbar-text"<%= button_to "Create Account", new_user_registration_path, method: "get", class: "btn btn-primary" %></li>
+          <li><h5><%= link_to "Sign in", user_session_path, method: "get", style: "color: grey;" %></h5></li>
         </ul> 
-	    <% end %>
-	  </div>
-	</div>  
+      <% end %>
+    </div>
+	</div>
 </div>  
