@@ -1,26 +1,29 @@
 
-<div class="container">
+<div class="container" id="container">
   <div class="content">  
     <div class="row 2nd-row">  
       <div class="span12">
+        <h4>Most Popular</h4>
         <ul class="thumbnails list-unstyled">
           <% @videos.each do |video| %>
-            <li class="col-md-3">
-              <div class="thumbnail img-polaroid"> 
-                <%= raw youtube_embed(video.video_link)%>
-                <div class="caption well-large">  
-                  <span><%= "Artist: #{video.artist}" %></span><br>
-                  <%= "Song: #{video.song}"%><br>
-                  <%= "Found by: #{video.submitted_by}"%><br></span>
-                   <%= button_to "Gem!", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
-                  <div class="modal-footer" style="text-align: left; border-style:outset;">
-                    <div class="progress progress-striped active" style="background: #ddd; border-style:outset;">
-                      <div class="bar" style="width: 40%"></div>
-                    </div>
-                  </div>  
-                </div>    
-              </div>             
-            </li>
+          <div class="item">
+              <li class="col-md-3">
+                <div class="thumbnail img-polaroid"> 
+                  <%= raw youtube_embed(video.video_link)%>
+                  <div class="caption well-large">  
+                    <span><%= "Artist: #{video.artist}" %></span><br>
+                    <%= "Song: #{video.song}"%><br>
+                    <%= "Found by: #{video.submitted_by}"%><br></span>
+                     <%= button_to "Gem!", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
+                    <div class="modal-footer" style="text-align: left; border-style:outset;">
+                      <div class="progress progress-striped active" style="background: #ddd; border-style:outset;">
+                        <div class="bar" style="width: 40%"></div>
+                      </div>
+                    </div>  
+                  </div>    
+                </div>             
+              </li>
+            </div>  
           <% end %>
         </div>   
       </ul>

@@ -8,42 +8,7 @@
 </head>
   <body>
 
-<div class="jumbotron">
-
-	<div class="row">
-
-		<div class="navbar navbar-default navbar-fixed-top" >
-
-		  <%= render 'layouts/messages' %>
-
-		  <div class="navbar-header">
-        <a href="/"><%= image_tag("finallogo3.png")%></a>
-      </div>   
-  
-      <ul class="nav navbar-nav">
-        <li class="text-center"><%= button_to "Sign up", new_user_registration_path, method: "get", class: "btn navbar-btn btn-primary" %></li>
-      </ul>      	
-
-      <% if user_signed_in? %>
-        <%= link_to "Signout", destroy_user_session_path, :method => "delete" %>
-      <% else %>        
-	      <form class="navbar-form navbar-right" role="signin">
-          <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-		        <%= f.input :email, :required => false, :autofocus => true %>
-		        <%= f.input :password, :required => false %>
-		        <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-            <%= f.button :submit, "Sign in" %>
-          <% end %>
-				</form>
-		  <% end %>
-	  </div>	
-	
-	<div class="textinjumbo">	
-		<h2>Discover musical gems. Contribute and vote for overlooked music.</h2>
-	</div>  
-</div>  
-
-		<%= render 'layouts/jumbonav' %>
+		<%= render 'layouts/navbar' %>
 	  <%= yield %>
 
   </body>
