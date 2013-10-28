@@ -6,7 +6,6 @@ HiddenGems3::Application.routes.draw do
   resources :videos do
     post 'vote_up'
     post 'vote_down'
-
   end
   
 
@@ -15,6 +14,8 @@ HiddenGems3::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+  get 'most_popular' => 'videos#most_popular'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

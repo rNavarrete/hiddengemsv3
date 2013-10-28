@@ -81,7 +81,11 @@ class VideosController < ApplicationController
       render :nothing => true, :status => 404
     end
   end                   
-
+  
+  def most_popular
+    @videos = Video.tally({:at_least => 1, :limit => 20, :order => 'vote_count desc'})
+  end   
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_video
