@@ -9,19 +9,19 @@
 		  <div class="navbar-header">
         <a href="/"><%= image_tag("logobronson1.png")%></a>
       </div>
-      <div class="nav navbar-nav navbar-left"><h3>HiddenGems</h3></div>
+      <div class="nav navbar-nav navbar-left"><h1 style="color: #ffffff; font-family: Leckerli One; font-size: 40px;">HiddenGems</h1></div>
 
   
 
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
-          <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-primary" %></h5></li> 
-          <li><h5><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: gray;"%></h5></li>    
+          <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-success" %></h5></li> 
+          <li><h5 class="navbar-text"><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: #FCFFF5;"%></h5></li>    
         </ul>
       <% else %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><h5 class="navbar-text"<%= button_to "Create Account", new_user_registration_path, method: "get", class: "btn btn-primary" %></li>
-          <li><h5><%= link_to "Sign in", user_session_path, method: "get", style: "color: grey;" %></h5></li>
+        <ul class="nav navbar-nav navbar-right" style="display: inline;">
+          <li><h5 class="navbar-text"><%= button_to "Create Account", new_user_registration_path, class: "btn btn-primary", :method => "get" %></li>
+          <li><h5 class="navbar-text"><%= link_to "Sign in", user_session_path, method: "get", style: "color: #FCFFF5;" %></h5></li>
         </ul> 
       <% end %>
     </div>

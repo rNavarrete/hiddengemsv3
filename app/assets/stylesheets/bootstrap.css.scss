@@ -48,6 +48,7 @@ html {
 
 body {
   margin: 0;
+  background-color: black;
 }
 
 a:focus {
@@ -4376,7 +4377,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #ffffff;
+  background-color: #5cb85c;
   border-color: #e7e7e7;
 }
 
@@ -4964,7 +4965,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   line-height: 1.428571429;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid lightgrey;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;

@@ -12,7 +12,9 @@
 
 
 
-
+.buttonsignin {
+  padding-top: 10px;
+}
 
 
 article,
@@ -309,8 +311,8 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #046380;
-  background-color: #ffffff;
+  color: white;
+  background-color: black;
 }
 
 input,
@@ -2210,7 +2212,7 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #4cae4c;
+  background-color: seagreen;
   border-color: transparent;
   border-style: outset;
 }
@@ -2222,7 +2224,7 @@ fieldset[disabled] .btn-danger.active {
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
   background-color: seagreen;
-  border-color: seagreen;
+  border-color: white;
 }
 
 .btn-success:active,
@@ -4257,7 +4259,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: none;
     width: auto;
     margin-top: 0;
-    background-color: black;
+    background-color: #ffffff;
     border: 0;
     box-shadow: none;
   }
@@ -4295,7 +4297,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-right {
     float: right !important;
     padding-top: 8px;
-    padding-right: 10px;
+    padding-right: 15px;
   }
 }
 
@@ -4389,14 +4391,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 9%, rgba(255,255,255,0.9) 35%, rgba(255,255,255,0.9) 43%, rgba(255,255,255,0.9) 68%, rgba(255,255,255,0.9) 86%, rgba(255,255,255,0.9) 97%, rgba(255,255,255,0.9) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(9%,rgba(255,255,255,0.9)), color-stop(35%,rgba(255,255,255,0.9)), color-stop(43%,rgba(255,255,255,0.9)), color-stop(68%,rgba(255,255,255,0.9)), color-stop(86%,rgba(255,255,255,0.9)), color-stop(97%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0.9))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 9%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0.9) 43%,rgba(255,255,255,0.9) 68%,rgba(255,255,255,0.9) 86%,rgba(255,255,255,0.9) 97%,rgba(255,255,255,0.9) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(255,255,255,0.9) 9%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0.9) 43%,rgba(255,255,255,0.9) 68%,rgba(255,255,255,0.9) 86%,rgba(255,255,255,0.9) 97%,rgba(255,255,255,0.9) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(255,255,255,0.9) 9%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0.9) 43%,rgba(255,255,255,0.9) 68%,rgba(255,255,255,0.9) 86%,rgba(255,255,255,0.9) 97%,rgba(255,255,255,0.9) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 9%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0.9) 43%,rgba(255,255,255,0.9) 68%,rgba(255,255,255,0.9) 86%,rgba(255,255,255,0.9) 97%,rgba(255,255,255,0.9) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
-border-color: lightgrey;
+background: #3E606F;
+border-color: black;
 }
 
 .navbar-default .navbar-brand {
@@ -5003,8 +4999,10 @@ a.list-group-item.active > .badge,
   max-width: 100%;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: white;
+  border: 2px;
+  border-color: lightgrey;
+  border-style: outset;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
@@ -5027,8 +5025,9 @@ a.thumbnail:focus {
 }
 
 .thumbnail .caption {
+  font-size: 12px;
   padding: 9px;
-  color: #333333;
+  color: #3E606F;
 }
 
 .alert {

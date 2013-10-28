@@ -5,6 +5,8 @@ HiddenGems3::Application.routes.draw do
  
   resources :videos do
     post 'vote_up'
+    post 'vote_down'
+
   end
   
 

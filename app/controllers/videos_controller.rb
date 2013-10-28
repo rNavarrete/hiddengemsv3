@@ -64,8 +64,19 @@ class VideosController < ApplicationController
 
   def vote_up
     begin
-      current_user.vote_for(@video = Video.find(params[:id]))
-      render :nothing => true, :status => 200
+      current_user.vote_exclusively_for(@video = Video.find(params[:video_id]))
+      flash[:notice] = "Vote successfully created."
+      redirect_to root_url
+    rescue ActiveRecord::RecordInvalid
+      render :nothing => true, :status => 404
+    end
+  end          
+
+  def vote_down
+    begin
+      current_user.vote_exclusively_against(@video = Video.find(params[:video_id]))
+      flash[:notice] = "Vote successfully created."
+      redirect_to root_url
     rescue ActiveRecord::RecordInvalid
       render :nothing => true, :status => 404
     end

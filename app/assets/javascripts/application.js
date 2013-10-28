@@ -16,9 +16,3 @@
 //= require bootstrap
 //= require_tree .
 
-
-$('#container').isotope({
-  // options
-  itemSelector : '.item',
-  layoutMode : 'fitRows'
-});
