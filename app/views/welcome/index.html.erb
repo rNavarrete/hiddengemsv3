@@ -22,22 +22,21 @@
                       video_path(video, :anchor => "disqus_thread"), 
                      :"data-disqus-identifer" => video.id %>
 
-                     <div class= "votingbuttons"> 
+                     <div class= "votingbuttons" style="btn-group btn-group-justified"> 
 
-                    <% if current_user &&  current_user.voted_for?(@videos.find(video.id)) %>
-                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-info navbar-btn disabled" %>
-                    <% else %>
-                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
-                    <% end %> 
-                    <% if current_user &&  current_user.voted_against?(@videos.find(video.id)) %>
-                      <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-info navbar-btn disabled" %>
-                    <% else %>
-                      <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-info navbar-btn" %>
-                    <% end %> 
-  
-                     </div>  
-                    </div>    
-                </div>             
+                        <% if current_user &&  current_user.voted_for?(@videos.find(video.id)) %>
+                          <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-success disabled" %>
+                        <% else %>
+                          <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-success" %>
+                        <% end %> 
+                      
+                        <% if current_user &&  current_user.voted_against?(@videos.find(video.id)) %>
+                          <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-danger navbar-btn disabled" %>
+                        <% else %>
+                          <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-danger navbar-btn" %>
+                        <% end %>  
+                      </div>    
+                    </div>             
               </li>
             </div>  
           <% end %>
