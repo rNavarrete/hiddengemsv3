@@ -17,16 +17,17 @@
                       <span><%= "Artist: #{video.artist}" %></span><br>
                       <%= "Song: #{video.song}"%><br>
                       <%= "Found by: #{video.submitted_by}"%><br></span>
-                      <%= link_to "Comments", video_path(video.id) %>
-                        <% positiveVoteCount = video.votes_for %>
-                       <%= puts "#{positiveVoteCount}" %>
+                      <%= "Votes: #{video.votes_for}"%><br></span>
+                      <%= link_to "This will be replaced by the comment count", 
+                      video_path(video, :anchor => "disqus_thread"), 
+                     :"data-disqus-identifer" => video.id %>
 
                      <div class= "votingbuttons"> 
 
                     <% if current_user &&  current_user.voted_for?(@videos.find(video.id)) %>
-                      <%= button_to "Gem", video_vote_up_path(video.id), class: "btn btn-info navbar-btn disabled" %>
+                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-info navbar-btn disabled" %>
                     <% else %>
-                      <%= button_to "Gem", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
+                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
                     <% end %> 
                     <% if current_user &&  current_user.voted_against?(@videos.find(video.id)) %>
                       <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-info navbar-btn disabled" %>

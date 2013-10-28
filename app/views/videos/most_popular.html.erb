@@ -24,9 +24,9 @@
                      <div class= "votingbuttons"> 
 
                     <% if current_user &&  current_user.voted_for?(@videos.find(video.id)) %>
-                      <%= button_to "Gem", video_vote_up_path(video.id), class: "btn btn-info navbar-btn disabled" %>
+                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-primary disabled" %>
                     <% else %>
-                      <%= button_to "Gem", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
+                      <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-info navbar-btn" %>
                     <% end %> 
                     <% if current_user &&  current_user.voted_against?(@videos.find(video.id)) %>
                       <%= button_to "Nope!", video_vote_down_path(video.id), class: "btn btn-info navbar-btn disabled" %>
