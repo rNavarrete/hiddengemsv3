@@ -17,6 +17,8 @@
                       <span><%= "Artist: #{video.artist}" %></span><br>
                       <%= "Song: #{video.song}"%><br>
                       <%= "Found by: #{video.submitted_by}"%><br></span>
+                          <%= link_to "Comments", video_path(video.id) %>
+
 
                      <div class= "votingbuttons"> 
 
