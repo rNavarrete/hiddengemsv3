@@ -1,8 +1,8 @@
   <div class="row-fluid col-md-12">
-    <div class= "col-md-2" style="color: #3E606F;">  
-      <h3 style="color: #91AA9D; font-family:Leckerli One;">Recent</h3>      
-      <a href="/most_popular"><h3 style="color: #91AA9D; font-family: Leckerli One;">Most Popular</h3></a>
-      <h3 style="color: #91AA9D; font-family: Leckerli One;">Top Gems</h3>
+    <div class= "col-md-2">  
+      <h3 style="color: #046380; font-family:Leckerli One;">Recent</h3>      
+      <a href="/most_popular"><h3 style="color: #046380; font-family: Leckerli One;">Most Popular</h3></a>
+      <h3 style="color: #046380; font-family: Leckerli One;">Top Gems</h3>
     </div>   
     
     <div id="container-fluid">
@@ -17,8 +17,9 @@
                       <span><%= "Artist: #{video.artist}" %></span><br>
                       <%= "Song: #{video.song}"%><br>
                       <%= "Found by: #{video.submitted_by}"%><br></span>
-                          <%= link_to "Comments", video_path(video.id) %>
-
+                      <%= link_to "Comments", video_path(video.id) %>
+                        <% positiveVoteCount = video.votes_for %>
+                       <%= puts "#{positiveVoteCount}" %>
 
                      <div class= "votingbuttons"> 
 

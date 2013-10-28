@@ -1999,7 +1999,7 @@ textarea.input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -4381,6 +4381,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   float: left;
   margin-top: 8px;
   margin-bottom: 10px;
+  font-family: Leckerli One;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {

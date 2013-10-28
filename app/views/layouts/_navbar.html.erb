@@ -9,14 +9,15 @@
 		  <div class="navbar-header">
         <a href="/"><%= image_tag("logobronson1.png")%></a>
       </div>
-      <div class="nav navbar-nav navbar-left"><h1 style="color: #ffffff; font-family: Leckerli One; font-size: 40px;">hiddengems</h1></div>
+      <div class="nav navbar-nav navbar-left"><h1 style="color: #ffffff; font-family: Leckerli One; font-size: 40px;">HiddenGems</h1></div>
 
   
 
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
           <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-success" %></h5></li> 
-          <li><h5 class="navbar-text"><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: #FCFFF5;"%></h5></li>    
+          <li><h5 class="navbar-text"><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: #FCFFF5;"%></h5></li> 
+          <li><h5 class="navbar-text", style="color: #FCFFF5;"><%= "@#{current_user.username}" %></li></h5>   
         </ul>
       <% else %>
         <ul class="nav navbar-nav navbar-right" style="display: inline;">
