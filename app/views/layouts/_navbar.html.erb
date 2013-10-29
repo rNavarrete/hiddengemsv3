@@ -27,8 +27,7 @@
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
           <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-success" %></h5></li> 
-          <li><h5 class="navbar-text"><%= link_to "Signout", destroy_user_session_path, :method => "delete", style: "color: #FCFFF5;"%></h5></li> 
-          <li><h5 class="navbar-text", style="color: #ffffff;"><%= "@#{current_user.username}" %></li></h5>   
+          <li><h5 class="navbar-text", style="color: #ffffff; font-size: 25px;"><%= "@#{current_user.username}" %></li></h5>   
         </ul>
       <% else %>
         <ul class="nav navbar-nav navbar-right" style="display: inline;">
