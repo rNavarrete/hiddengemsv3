@@ -1,6 +1,10 @@
 class WelcomeController < ApplicationController
   def index
-    @videos = Video.all
-    @items = Video.all
+  	if params[:query]
+  	  @videos = Video.advanced_search(params[:query])
+  	else
+      @videos = Video.all
+      @items = Video.all
+    end  
   end
 end

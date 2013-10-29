@@ -57,7 +57,6 @@ a:focus {
 
 a:active,
 a:hover {
-  outline: 0;
 }
 
 h1 {
@@ -223,7 +222,7 @@ table {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: transparent;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -332,7 +331,7 @@ a {
 a:hover,
 a:focus {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: transparent;
 }
 
 a:focus {
@@ -2310,7 +2309,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: transparent;
   background-color: transparent;
 }
 

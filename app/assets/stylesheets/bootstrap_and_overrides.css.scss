@@ -230,7 +230,7 @@ table {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: transparent;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -339,7 +339,6 @@ a {
 a:hover,
 a:focus {
   color: #ffffff;
-  text-decoration: underline;
   background-color: #ffffff;
 }
 
@@ -2212,7 +2211,7 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #62c462;
+  background-color: #52CC4A;
   border-color: transparent;
   border-style: outset;
 }
@@ -2320,7 +2319,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: transparent;
   background-color: transparent;
 }
 
