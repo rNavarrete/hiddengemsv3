@@ -87,10 +87,10 @@ class VideosController < ApplicationController
     if params[:query]
       @search = 1
       @items = Video.all  
-      @videos = Video.advanced_search(params[:query]).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 15)    
+      @videos = Video.advanced_search(params[:query]).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 9)    
     else    
       @items = Video.all
-      @videos = Video.tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 15)  
+      @videos = Video.tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 9)  
     end
   end  
 
