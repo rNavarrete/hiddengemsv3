@@ -84,8 +84,14 @@ class VideosController < ApplicationController
   end                   
   
   def most_popular
-    @videos = Video.tally( :at_least => 1, :limit => 5, :order => 'vote_count desc')  
-  end
+    if params[:query]
+      @items = Video.all  
+      @videos = Video.advanced_search(params[:query]).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').page(params[:page]).per_page(10)
+    else    
+      @items = Video.all
+      @videos = Video.tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 15)  
+    end
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -18,21 +18,21 @@
                 <%= raw youtube_embed(video.video_link)%>
                  
                 <div class="caption well">  
-                  <% if current_user &&  current_user.voted_for?(@videos.find(video.id)) %>
-                          <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-sm btn-succes disabled"  %>
+                  <% if current_user &&  current_user.voted_for?(@items.find(video.id)) %>
+                          <%= button_to "Thanks!", video_vote_up_path(video.id), class: "btn btn-sm btn-success disabled"  %>
                         <% else %>
                           <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-sm btn-success" %>
                         <% end %> 
-                        <% if current_user &&  current_user.voted_against?(@videos.find(video.id)) %>
-                          <%= button_to "Nope", video_vote_down_path(video.id), class: "btn btn-sm btn-danger disabled", style: "margin-bottom: 20px;" %>
+                        <% if current_user &&  current_user.voted_against?(@items.find(video.id)) %>
+                          <%= button_to "Thanks!", video_vote_down_path(video.id), class: "btn btn-sm btn-danger disabled" %>
                         <% else %>
-                          <%= button_to "Nope", video_vote_down_path(video.id), class: "btn btn-sm btn-danger" %>
+                          <%= button_to "Nope", video_vote_down_path(video.id), class: "btn btn-sm btn-danger"%>
                         <% end %> 
                   <span><%= "Artist: #{video.artist}" %></span><br>
                   <%= "Song: #{video.song}"%><br>
                   <%= "Found by: #{video.submitted_by}"%><br></span>
                   <%= "Votes: #{video.votes_for}"%><br></span>
-                      <%= link_to "This will be replaced by the comment count", 
+                      <%= link_to "0 Comments", 
                       video_path(video, :anchor => "disqus_thread"), 
                      :"data-disqus-identifer" => video.id %><br>
                 </div>  
@@ -41,6 +41,7 @@
           </div>  
         <% end %>
       </ul>
+    <%= will_paginate @videos%>
     </div>
   </div>  
 </div>            

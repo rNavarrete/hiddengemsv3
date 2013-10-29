@@ -8,6 +8,7 @@ gem 'devise', '3.1'
 gem 'simple_form'
 gem 'pg'
 gem 'textacular', '~> 3.0'
+gem 'will_paginate', '~> 3.0'
 
 
 # Use sqlite3 as the database for Active Record
