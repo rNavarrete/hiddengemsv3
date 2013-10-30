@@ -30,7 +30,7 @@
                         <% end %>
                       </div>  
                       
-                      <div id="votedown">
+                      <div class="votedown">
                         <% if current_user &&  current_user.voted_against?(@items.find(video.id)) %>
                           <%= button_to "Thanks!", video_vote_down_path(video.id), class: "btn btn-sm btn-danger disabled", style: "display: inline;", :remote => true %>
                         <% else %>
