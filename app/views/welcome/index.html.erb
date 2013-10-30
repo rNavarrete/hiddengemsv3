@@ -21,18 +21,22 @@
               <li class="col-md-4">
                 <div class="thumbnail img-polaroid"> 
                   <%= raw youtube_embed(video.video_link)%>
-                        
+
+                      <div class="voteup">
                         <% if current_user &&  current_user.voted_for?(@items.find(video.id))%>
-                          <%= button_to "Thanks!", video_vote_up_path(video.id), class: "btn btn-sm btn-success disabled" %>
+                          <%= button_to "Thanks!", video_vote_up_path(video.id), id: "voteup", class: "btn btn-sm btn-success disabled", :remote => true %>
                         <% else %>
-                          <%= button_to "Dope", video_vote_up_path(video.id), class: "btn btn-sm  btn-success" %>
-                        <% end %> 
+                          <%= button_to "Dope", video_vote_up_path(video.id), id: "voteup", class: "btn btn-sm  btn-success", :remote => true %>
+                        <% end %>
+                      </div>  
                       
+                      <div id="votedown">
                         <% if current_user &&  current_user.voted_against?(@items.find(video.id)) %>
-                          <%= button_to "Thanks!", video_vote_down_path(video.id), class: "btn btn-sm btn-danger disabled", style: "display: inline;" %>
+                          <%= button_to "Thanks!", video_vote_down_path(video.id), class: "btn btn-sm btn-danger disabled", style: "display: inline;", :remote => true %>
                         <% else %>
-                          <%= button_to "Nope", video_vote_down_path(video.id), class: "btn btn-sm btn-danger", style: "display: inline;" %>
-                        <% end %>  
+                          <%= button_to "Nope", video_vote_down_path(video.id), class: "btn btn-sm btn-danger", style: "display: inline;", :remote => true %>
+                        <% end %>
+                      </div>    
 
                     <div class="caption well">
                       <span><%= "Artist: #{video.artist}" %></span><br>

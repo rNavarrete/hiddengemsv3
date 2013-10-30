@@ -64,13 +64,14 @@ class VideosController < ApplicationController
   end
 
   def vote_up
-    begin
-      current_user.vote_exclusively_for(@video = Video.find(params[:video_id]))
-      flash[:notice] = "Vote successfully created."
-      redirect_to root_url
-    rescue ActiveRecord::RecordInvalid
-      render :nothing => true, :status => 404
-    end
+    current_user.vote_exclusively_for(@video = Video.find(params[:video_id]))
+     
+      respond_to do |format|
+        format.html {redirect_to root_url}
+        format.js  
+        flash[:notice] = "Vote successfully created."
+
+      end
   end          
 
   def vote_down
