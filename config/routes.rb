@@ -16,6 +16,8 @@ HiddenGems3::Application.routes.draw do
   root 'welcome#index'
 
   get 'most_popular' => 'videos#most_popular'
+  get 'top_24' => 'videos#top_24'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
