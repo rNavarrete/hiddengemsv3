@@ -7,10 +7,10 @@
 
 
 		  <div class="navbar-header">
-        <a href="/"><%= image_tag("logobronson1.png")%></a>
+        <a href="/"><%= image_tag("logoym1.png")%></a>
       </div>
       
-      <div class="nav navbar-nav navbar-left"><h1 style="color: #67ff5c; font-family: Leckerli One; font-size: 40px; margin-top: 10px; padding-right: 55px;"><a href="/" style="color: #ffffff; text-decoration: none;"> HiddenGems</h1></a></div>
+      <div class="nav navbar-nav navbar-left"><h1 style="color: #67ff5c; font-family: Leckerli One; font-size: 35px; margin-top: 10px; padding-right: 55px;"><a href="/" style="color: #ffffff; text-decoration: none;"> HiddenGems</h1></a></div>
           
       <form class="navbar-form navbar-left" role="search">
         
@@ -26,8 +26,8 @@
 
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
-          <li><h5 class="navbar-text"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-success" %></h5></li> 
-          <li><h5 class="navbar-text", style="color: #ffffff; font-size: 25px;"><%= "@#{current_user.username}" %></li></h5>   
+          <li><h5 class="navbar-text" style="font-family: Petrona, serif; color: black; font-size: 20px;"><%= button_to "Submit a gem", new_video_path, :method => "get", class: "btn btn-sm btn-success" %></h5></li> 
+          <li><h5 class="navbar-text", style="color: #ffffff; font-size: 20px;"><%= "@#{current_user.username}" %></li></h5>   
         </ul>
       <% else %>
         <ul class="nav navbar-nav navbar-right" style="display: inline;">

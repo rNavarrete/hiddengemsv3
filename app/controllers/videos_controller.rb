@@ -95,7 +95,7 @@ class VideosController < ApplicationController
     end
   end  
 
-  def top_24
+  def top_48
     if params[:query]
       @search = 1
       @items = Video.all  

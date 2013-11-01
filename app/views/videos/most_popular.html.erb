@@ -1,17 +1,18 @@
-  
 <div class="row col-md-1">
-  <h3 style="font-family: Leckerli One; color: black;"><%= link_to "Most Recent", most_recent_path %></h3>
+  <h3 style="font-family: 'Fredoka One', cursive; color: black; font-size: 20px;"><%= link_to "New", most_recent_path %></h3>
+  <h3 style="font-family: 'Fredoka One', cursive; color: black; font-size: 20px;"><%= link_to "Rising", most_popular_path %></h3>
+
   <% if user_signed_in? %>
-    <h3 style="font-family: Leckerli One; color: lightblue;"><%= link_to "Signout", destroy_user_session_path, :method => "delete"%></h3>
+    <h3 style="font-family: 'Fredoka One', cursive; color: black; font-size: 20px;"><%= link_to "Signout", destroy_user_session_path, :method => "delete"%></h3>
   <% else %>
   <% end %>  
 </div>  
   <div class="row-fluid col-md-12">
     <div id="container-fluid">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-9 col-md-offset-1">
         <ul class="thumbnails list-unstyled item">
           <% if @search.nil? %>
-            <h1 style="font-family: Leckerli One; color: black; "> Most Popular </h1>
+            <h1 style="font-family: 'Fredoka One', cursive; color: black; font-size: 20px;"> Top </h1>
           <% else %>
             <h2 style="font-family: Leckerli One; color: black; ">Search Results</h2>      
           <% end%>

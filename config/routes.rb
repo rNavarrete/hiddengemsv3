@@ -15,8 +15,8 @@ HiddenGems3::Application.routes.draw do
   # You can have the root of your site routed with "root"
 
   get 'most_popular' => 'videos#most_popular'
-  get 'top_24' => 'videos#top_24'
-  root 'videos#top_24'
+  get 'top_48' => 'videos#top_48'
+  root 'videos#top_48'
   get 'most_recent' => 'videos#most_recent'
 
 
