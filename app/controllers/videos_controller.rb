@@ -102,7 +102,7 @@ class VideosController < ApplicationController
       @videos = Video.advanced_search(params[:query]).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 9)  
     else    
       @items = Video.all
-      @videos = Video.where(created_at: (Time.now.midnight - 1.day)..Time.now.midnight).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 9)
+      @videos = Video.where(created_at: (Time.now.midnight - 2.day)..Time.now.midnight).tally( :at_least => 1, :limit => 5, :order => 'vote_count desc').paginate(:page => params[:page], :per_page => 9)
     end
   end  
 

@@ -1,8 +1,8 @@
 <div class="row col-md-1">
-  <h3 style="font-family: Leckerli One; color: lightblue;"><%= link_to "Most Recent", most_recent_path %></h3>
-  <h3 style="font-family: Leckerli One; color: lightblue;"><%= link_to "Most Popular", most_popular_path %></h3>
+  <h3 style="font-family: 'Tauri', sans-serif; color: lightblue;"><%= link_to "Most Recent", most_recent_path %></h3>
+  <h3 style="font-family: 'Tauri', sans-serif; lightblue;"><%= link_to "Most Popular", most_popular_path %></h3>
   <% if user_signed_in? %>
-    <h3 style="font-family: Leckerli One; color: lightblue;"><%= link_to "Signout", destroy_user_session_path, :method => "delete"%></h3>
+    <h3 style="font-family: 'Tauri', sans-serif; color: lightblue;"><%= link_to "Signout", destroy_user_session_path, :method => "delete"%></h3>
   <% else %>
   <% end %>  
 </div>  
@@ -11,7 +11,7 @@
       <div class="col-md-10 col-md-offset-1">
         <ul class="thumbnails list-unstyled item">
           <% if @search.nil? %>
-            <h1 style="font-family: Leckerli One; color: black; "> Top in 24 hours </h1>
+            <h1 style="font-family: 'Tauri', sans-serif; color: black; "> Top in 24 hours </h1>
           <% else %>
             <h2 style="font-family: Leckerli One; color: black; ">Search Results</h2>      
           <% end%>
