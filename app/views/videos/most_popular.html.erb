@@ -1,6 +1,6 @@
   
 <div class="row col-md-1">
-  <h3 style="font-family: Leckerli One; color: black;"><%= link_to "Most Recent", root_path %></h3>
+  <h3 style="font-family: Leckerli One; color: black;"><%= link_to "Most Recent", most_recent_path %></h3>
   <% if user_signed_in? %>
     <h3 style="font-family: Leckerli One; color: lightblue;"><%= link_to "Signout", destroy_user_session_path, :method => "delete"%></h3>
   <% else %>

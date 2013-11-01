@@ -13,10 +13,13 @@ HiddenGems3::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
 
   get 'most_popular' => 'videos#most_popular'
   get 'top_24' => 'videos#top_24'
+  root 'videos#top_24'
+  get 'most_recent' => 'videos#most_recent'
+
+
 
 
   # Example of regular route:
